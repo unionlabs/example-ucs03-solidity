@@ -1,0 +1,11 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+via-ir = true
+
+[fmt]
+enabled = true
+tab_width = 2
+include = ['src', 'script']
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

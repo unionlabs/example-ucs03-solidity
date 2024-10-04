@@ -1,5 +1,0 @@
-{
-  "[solidity]": {
-    "editor.defaultFormatter": "forge"
-  }
-}

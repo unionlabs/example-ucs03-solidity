@@ -29,7 +29,6 @@ contract Transfer {
   address public constant relay = 0xD0081080Ae8493cf7340458Eaf4412030df5FEEb;
 
   // https://github.com/unionlabs/union/blob/main/evm/contracts/apps/ucs/01-relay/Relay.sol#L54-L61
-  // function transferAsset(address asset, address to, uint256 amount) public {
   function transferAsset() public {
     LocalToken[] memory tokens = new LocalToken[](1);
     tokens[0].denom = 0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238;

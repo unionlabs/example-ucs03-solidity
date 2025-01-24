@@ -5,18 +5,18 @@ import {Transfer} from "../src/Transfer.sol";
 import {IERC20} from "forge-std/interfaces/IERC20.sol";
 
 contract TransferScript is Script {
-    address public constant USDC = 0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238;
+  address public constant muno = 0xF2865969cF99A28Bb77e25494fE12D5180fE0efD;
 
-    function run() public {
-        uint256 privateKey = vm.envUint("PRIVATE_KEY");
-        vm.startBroadcast(privateKey);
-        Transfer transfer = new Transfer();
+  function run() public {
+    uint256 privateKey = vm.envUint("PRIVATE_KEY");
+    vm.startBroadcast(privateKey);
+    Transfer transfer = new Transfer();
 
-        IERC20(USDC).transfer(address(transfer), 1500);
+    IERC20(muno).transfer(address(transfer), 1500000);
 
-        console.log("transferring");
-        transfer.transferAsset();
-        console.log("complete");
-        vm.stopBroadcast();
-    }
+    console.log("transferring");
+    transfer.transferAsset();
+    console.log("complete");
+    vm.stopBroadcast();
+  }
 }
